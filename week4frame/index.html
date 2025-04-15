@@ -12,61 +12,128 @@
     <!--IN DOCUMENT CSS BELOW-->
 
     <style>
-        /* we are now writing in CSS in this element*/
-
-        /* selecting elements by their tag types*/
+    
         body {
-            /* property: vale*/
-            background-color: lightblue;
+            
+            background-color: lightcoral;
+            background-image: url('images/seamlessbkgrd.jpg');
         }
 
         div {
-            /*these style changes will apply to all divs in the page. when selecting by tag type, all tags of that type are affected*/
-            border:3px solid lightcoral;
-            /*padding adds space between content and border*/
-            padding:10px; /*applies to all 4 sides: top, right, bottom, left*/
+           
+           border:3px solid lightcoral;
+          
+           padding:10px;
 
-            /*margin adds space between border and other elements*/
-            margin:10px;/*applies to all 4 sides: top, right, bottom, left*/
-        }
+       
+           margin:10px;
+       }
+
+       .borderfancy{
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        line-height: 10px;
+        background-color: lightblue;
+        font-size: 40px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
 
 
-        /*selecting an element by its id*/
+   
         #wrapper {
             width:980px;
-            margin:auto; /*auto equal left and right space when width is applied*/
+            margin:auto; 
 
             background-color: rgb(255, 255, 255);
             color:rgb(0, 0, 0);
 
         }
 
-        /*selecting a group by their .class name*/
-        .border{
-            border: 1px solid lightblue;
+        #nav {
+            border:2px solid white;
+            padding:10px;
+            margin:10px;
+
+            border-radius: 10px;
+
         }
+
+
+
+        .border{
+            border: 3px solid lightcoral;
+        }
+
+        #header{
+            border:3px solid lightcoral;
+            height:100px;
+            width:800px;
+            margin:auto;
+       
+        }
+
+        #buttons {
+            border:3px solid lightcoral;
+            height:50px;
+            width:510px;
+            margin:auto;
+        }
+
+        .nav-btn{
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: lightblue;
+            float:left;
+            display:block;
+            margin-right:10px;
+            margin-left:10px;
+
+            text-decoration: none;
+            font-size:24px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            color:black
+
+        }
+
+        .nav-btn:hover {
+            background-color: lightblue;
+            color: white;
+            font-style: bold;
+
+            background-image: url(images/jellyfish.webp)
+        }
+
         
     </style>
 </head>
 <body>
     
-    <!-- #wrapper div to "wrap around" all content of the page-->
+   
 
     <div id ="wrapper">
 
         <!--HEADER-->
-        <div id="header" class="border fancy">
-            <h1 id="title"><em>Ponyo</em></h1>
+        <div id="header" class="borderfancy">
+            <h1 id="title">Ponyo</h1>
 
         </div><!--/#header-->
 
         <!--NAV-->
         <div id="nav">
 
-            <!-- use relative link paths for pages inside of your site-->
-             <a href="index.html" class="link">HOME</a>
-             <a href="cast.html" class="link">CAST</a>
-             <a href="review.html" class="link">REVIEW</a>
+            <div id="buttons" >
+
+            <a href="index.html" class="nav-btn">HOME</a>
+            <a href="cast.html" class="nav-btn">CAST</a>
+            <a href="review.html" class="nav-btn">REVIEW</a>
+
+
+            </div>
+
 
 
         </div><!--/#nav-->
@@ -74,12 +141,12 @@
         <!--CONTENT-->
         <div id="content">
             <h2>Home Page</h2>
-            <!--relative image paths: these are image files tha live in our sites root folder; safest option-->
+
 
 
             <div id="main-content">
-                <p>A <i>brief</i> (1-2 sentence) summary of your <em>madia choice</em></p>
-
+                <p>The movie <i>Ponyo</i> follows the story of a goldfish princess—daughter of the sea wizard (Fujimoto) and sea godess (Granmamare)—named Brunhilde (later renamed <em>Ponyo</em>) who later encounters and befriends a boy named Sosuke. </p>
+                
                 <img src="images/ponyo.jpg" alt="Ponyo movie poster" style="width:70%;">
 
                 <div class="info">
