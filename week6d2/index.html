@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Week 6 | JS Conditions & Functions Demo</h1>
+    <h3 id="special" onclick="ouch();">Conditions & Functions - Click Me!</h3>
+    <script>
+
+        //in-document javascript - lives in the HTML file inside of the <script>
+
+        //variables/names must be DECLARED before we can assign data to them
+        var gross = 10
+
+        var tax_total = 10 * (20/100)
+        //once a var like 'gross' has been declared & defined, it can be used in math or conditions
+
+        //basic function for development and debugging -- goes to the:
+        console.log(`The gross is: $${gross.toFixed(2)} and the tax is: $${tax_total.toFixed(2)}`)
+
+        //prompt the user for a 'yes' or 'no' response
+        var pref = prompt(`Welcome to Good Burger, home of the Good Burger, may I take your order?\nPlease type 'yes' or 'no':`).toLowerCase()
+        console.log(`User entered: ${pref}`)
+
+        while(pref !== 'yes' && pref !== 'no')//|| for or, && for and
+        {
+            pref = prompt(`Sorry, our system does not recognize that response. \n\nMay I take your order? \nPLease type 'yes' or 'no':`).toLowerCase()
+            console.log(`User entered: ${pref}`)
+        }
+
+        //developer built function definition below
+        //just like variables, functions must be declared & defined before they can be used
+        function checkDining(_pref)
+
+        {
+            //_pref is a PARMETER and will be defined (assigned value) when func is called
+            //_pref is also a LOCAL VAR - it only exists inside of this function
+            //each time the func is called, a new value can be passed into _pref
+
+            if(_pref === 'yes')//conditions: (value | comparision | value)
+
+            else /*if(_pref === 'no')*/
+            {
+                alert(`You have poor taste`)
+                return 0
+            }
+            /*else
+            {
+                //didn't follow the directions of yes/no entry - unexpected value
+                alert(`Uh oh! Invalid Entry! \nPlease reload and re-read directions`)
+                return 'bad'
+            }*/
+        
+            {
+                //conditions require () in order to work in JS
+
+                var dining = prompt(`Would you like to dine-in or take-out? \nPlease type: 'in' or 'out': `)
+
+                if(dining === 'in')
+                {
+                    console.log(`User has chose to dine ${dinging}`)
+                    return dining //return value replaces call to the function
+                }
+                else if(dinging === 'out')
+                {
+                    console.log(`User has chose to dine ${dinging}`)
+                    return dining //return value replaces call to the function
+               
+                }
+                else //else NEVER has a condition
+                {
+                    console.log(`User enter a bad value`)
+                    return `bad` //bad value
+                }
+            }
+        
+        }
+
+        //once a function is defined, then it can be called!
+        //call checkDining() and pass the var 'pref' as an argument
+        var decsions = checkDining(pref)
+
+        if(decsion == 0)
+        {
+            alert(`Okay, have a nice day! Goodbye.`)
+        }
+        /*else if(decison == 'bad')
+        {
+            alert(`Something went wrong. Please reload the page and try again`)
+        }*/
+        else
+        {
+            alert(`Please tell me your order ... `)
+
+        }
+
+        //special function teaser for upcoming week 7
+        //call for this function is found in the main HTML 8D
+        function ouch(event)
+        {
+            console.log(`#special was clicked!`)
+            alert(`OUCH! you CLICKED me!`)//code pauses here until user interacts with pop-up
+            console.log(`alert fro ouch() has closed`)
+
+            var element = document.querySelector(`#special`)
+            console.log(element)
+
+            element.style.color=`red`
+            element.style.fontSize = `36px`
+            element.innerHTML= `Ouch! You clicked me!`
+            console.log(element)
+
+            /*element.id = `added-w-js`*/
+        }
+        
+    </script>
+</body>
+</html>
