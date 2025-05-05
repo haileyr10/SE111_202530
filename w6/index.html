@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Hailey Reed">
+<meta name="description" content="Week 6 JS Calculator">
+<title>Week 6 | JS Calculator</title>
+</head>
+
+<body>`
+   <script>
+
+
+
+      //store the value form prompt()
+      let hourlyPay = prompt("Enter your hourly pay: ")
+
+      //all data from prompt() is a STRING; must convert to Number() if wanting to do math
+      let workHours = prompt("Enter the hours you work daily: ")
+
+      //convert num to an actual Number
+      hourlyPay = Number(hourlyPay)
+      workHours = Number(workHours)
+
+
+      //num is now a NUMBER and can be used in a math process
+      var weekHours = 14 * workHours
+
+      var grossPay =  hourlyPay * weekHours
+
+      var tax = grossPay * 0.20
+
+      var netPay = grossPay - tax
+
+     grossPay = grossPay.toFixed(2)
+     tax = tax.toFixed(2)
+     netPay = netPay.toFixed(2)
+
+
+
+
+
+
+
+      alert(`      Gross Pay: $${grossPay}
+      Uncle Sam's Share: $${tax}
+      Net Pay: $${netPay}
+      `) //in browser, pop-up alert
+
+      console.log(`Gross Pay: $${grossPay}`) 
+      console.log(`Uncle Sam's Share: $${tax}`) 
+      console.log(`Net Pay: $${netPay}`) 
+
+
+   </script>
+
+</body>
+</html>
