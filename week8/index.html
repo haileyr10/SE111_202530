@@ -52,6 +52,9 @@
         people.push ("Cameron")
         console.log(`Array: ${people}\nArray length: ${people.length}`) 
 
+        people.push ("Elijah") //-----------------------------------------------------------
+        console.log(`Array: ${people}\nArray length: ${people.length}`) 
+
         people.push(prompt("Enter your name to be added: "))
         console.log(`Array: ${people}\nArray length: ${people.length}`) 
 
@@ -67,8 +70,8 @@
             "Surf's Up",
             "Sinners",
             "Alien",
-            "Hackers",
-            "Fave Movie"
+            "Jurassic Park",
+            "Spider-Man"
 
         ]
 
@@ -90,15 +93,73 @@
 
     }
 
-
-
        
 
         //ASSOCIATIVE ARRAYS--------------------------------------------------------
+        var pets = [] //create the empty array 
+        pets["Katie"] = "George"
+        pets["Ken"] = "Chopper"
+        pets["Tyler"] = "Luna"
+        pets["Hailey"] = "Daisy"
+        pets["Keenan"] = "John"
+        pets["Andrew"] = "Brody"
+        pets["Jayda"] = "Zen"
+        pets["Elijah S"] = "River"
+        pets["Cameron"] = "Kenzi"
+        pets["Elijah F"] = "Mellow"
+
+
+        console.log(`Pets Array: ${pets}`)
+        console.log(`First Value of Array: ${pets["Katie"]}`)
+      
 
 
 
         //OBJECTS-------------------------------------------------------------------
+
+        var pets = {
+            Katie: "George",
+            Ken: "Chopper",
+            Tyler: "Luna",
+            Hailey: "Daisy",
+            Keenan: "John",
+            Andrew: "Brody",
+            Jayda: "Zen",
+            ElijahS: "River",
+            Cameron: "Kenzi",
+            ElijahF: "Mellow"
+
+        } //create the empty array 
+       
+
+
+        console.log(`Pets Objectets}`)
+        console.log(`First Value of Objects: $["Katie]`)
+
+
+        //utlizing dot syntax to access an objects property's value:
+        //objectName.propertyName
+        console.log(`Last Value of Objects: ${pets.ElijahF}`)
+
+
+        //more of a real world object example
+        var playerCharacter = {
+            name: "John",
+            class: "Druid",
+            wildshaper: "Tiger",
+            age: 2,
+            hp: 26,
+            level: 1,
+            spells: ["Shellelagh", "Ice Knife", "Speak to Animals"],
+
+
+            //this is how a method is born:
+            greeting: function (){
+                alert(`I am ${this.name}, hear me meow`)
+            }
+
+        }
+      
 
 
 
