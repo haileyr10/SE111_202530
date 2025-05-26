@@ -9,7 +9,6 @@
 </head>
 
 <body>
-</body>
 
 <script type="text/javascript">
 	//Use this Array of objects to complete the assignment.
@@ -23,8 +22,23 @@
 		{first:"Marion", last:"Cobretti", credit:"Cobra" }
 	]
 
+	var body = document.querySelector("body");
 
-	
+	for (var i = 0; i < people.length; i++) {
+		var tempDiv = document.createElement("div");
+		tempDiv.className = "border";
+		tempDiv.setAttribute("id", people[i].first);
+
+		for (var key in people[i]) {
+			var tempP = document.createElement("p");
+			var text = document.createTextNode(people[i][key]);
+			tempP.appendChild(text);
+			tempDiv.appendChild(tempP);
+		}
+
+		body.appendChild(tempDiv);
+	}
 </script>
 
+</body>
 </html>
